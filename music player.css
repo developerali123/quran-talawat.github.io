@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  #toggle {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  h1 {
+    color: red;
+    font-size: 40px;
+    text-decoration: underline rgb(0, 68, 255) wavy;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(252, 5, 5);
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    height: 600px;
+    border-radius: 25px;
+    background-image: url("https://tse2.mm.bing.net/th?id=OIP.BGGw_HcePuLveoamS3opogHaD8&pid=Api&P=0");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  #title,
+  #seekbar span {
+    color: red;
+    font-size: 30px;
+  }
+  #seekbar span{
+    border:2px solid black;
+    border-radius: 25%;
+    background: gray;
+    padding: 2px 4px;
+  }
+  #img {
+    width: 200px;
+    height: 200px;
+    border: 4px solid red;
+    border-radius: 50%;
+    position: relative;
+    /* background:grey; */
+    background-image: url("https://tse2.mm.bing.net/th?id=OIP.aa_7bV5l_ZMJ_tAhY7P8fAHaEo&pid=Api&P=0");
+    background-size: 100% 100%;
+  }
+  .controls button,
+  .volume button {
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .rotate {
+    animation: rotation 8s infinite linear;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  .list-container {
+    padding: 10px;
+    border: 2px solid red;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 400px;
+  }
+  #playlist {
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    width: 100%;
+  }
+  #playlist h2 {
+    text-align: center;
+  }
+  #play {
+    display: inline-block;
+  }
+  #stop {
+    display: none;
+  }
+  #forward img {
+    width: 20px;
+    height: 20 px;
+  }
+  #seekbar,
+  .controls,
+  .volume {
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width:425px) {
+    .container{
+      width: 80%;
+    }
+  }

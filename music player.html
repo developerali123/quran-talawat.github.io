@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f8d1b1ce75.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="music player.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Quran Audio player</h1>
+      <div id="img"></div>
+      <h2 id="title"></h2>
+      <div id="seekbar">
+        <span class="currentTime">0:00</span>
+        <input
+          type="range"
+          name=""
+          id="time"
+          value="0"
+          max=""
+          min="0"
+          onchange="changeProgressBar()"
+        />
+        <span class="durationTime">0:00</span>
+      </div>
+      <div class="controls">
+        <button onclick="backwardsec()" id="forward">
+          <img src="skip_back_regular_icon_203274.png" alt="" srcset="" />
+        </button>
+        <button onclick="prev()"><i class="fas fa-backward"></i></button>
+        <button onclick="start()" id="play"><i class="fas fa-play"></i></button>
+        <button onclick="end()" id="stop"><i class="fas fa-stop"></i></button>
+        <button onclick="next()"><i class="fas fa-forward"></i></button>
+        <button onclick="forwardsec()" id="forward">
+          <img src="skip_forward_regular_icon_204939.png" alt="" srcset="" />
+        </button>
+      </div>
+      <div class="volume">
+        <button onclick="mute()"><i class="fas fa-volume-mute"></i></button>
+        <input
+          type="range"
+          name=""
+          id="volume"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1"
+          onchange="changevol()"
+        />
+        <button onclick="up()"><i class="fas fa-volume-up"></i></button>
+      </div>
+    </div>
+    <script src="music player.js"></script>
+  </body>
+</html>
